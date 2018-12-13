@@ -1,0 +1,12 @@
+// WinHex Sample script to recording file
+// and add it in zip archive.
+
+MessageBox "Start script to record file!!"
+GetUserInput flEx "Inpout a hash file to extract this:"
+{
+Find flEx 
+IfFound 
+MessageBox "File find !!"
+EndIF
+}[2000]
+//ExitIfNoFilesOpen
