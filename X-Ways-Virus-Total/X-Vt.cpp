@@ -124,16 +124,16 @@ LONG __stdcall XT_Init(DWORD nVersion, DWORD nFlags, HANDLE hMainWnd,
 	XWF_OutputMessage(L"> /!\\ Hash1 can be a MD5, Hash2 can be a SHA1 /!\\", 0);
 
 	/******************* For public X-Tension ********************/
-	//// init ifstream, and give the conf file
-	//ifstream infile;
-	//infile.open("conf.ini");
+	// init ifstream, and give the conf file
+	ifstream infile;
+	infile.open("conf.ini");
 
-	//// check if the file is open
-	//if (!infile) {
-	//	XWF_OutputMessage(L"[!] Could not open file.", 0);
-	//	return -1;
-	//}
-	//infile.close();
+	// check if the file is open
+	if (!infile) {
+		XWF_OutputMessage(L"[!] Could not open file.", 0);
+		return -1;
+	}
+	infile.close();
 	
 	return 1;
 }
@@ -180,37 +180,37 @@ LONG __stdcall XT_ProcessItemEx(LONG nItemID, HANDLE hItem, void* lpReserved)
 	}
 	/********************* For public X-Tension *************************/
 	// init ifstream, and give the conf file
-	//ifstream infile;
-	//infile.open("conf.ini");
+	ifstream infile;
+	infile.open("conf.ini");
 
-	//// check if the file is open
-	//if (!infile) {
-	//	XWF_OutputMessage(L"[!] Could not open file.", 0);
-	//	return -1;
-	//}
+	// check if the file is open
+	if (!infile) {
+		XWF_OutputMessage(L"[!] Could not open file.", 0);
+		return -1;
+	}
 
-	//// you only need one word at a time.
-	//string word;
-	//string apiKey;
+	// you only need one word at a time.
+	string word;
+	string apiKey;
 
-	//// init cpt,, and iter in all word
-	//int i = 1;
-	//while (infile >> word) {
-	//	// record apikey path
-	//	if (i == 2) {
-	//		apiKey = word;
-	//	}
-	//	i += 1;
-	//}
-	//infile.close();
+	// init cpt,, and iter in all word
+	int i = 1;
+	while (infile >> word) {
+		// record apikey path
+		if (i == 2) {
+			apiKey = word;
+		}
+		i += 1;
+	}
+	infile.close();
 
-	//// check the length of the apiKey and exReport string
-	//// if the lengths are too small then return -1 to precise in xWays to stop operation
-	//if (apiKey.length() < 64) {
-	//	apiKey = "None";
-	//	XWF_OutputMessage(L"[!] Bad ApiKey!", 0);
-	//	return -1;
-	//}
+	// check the length of the apiKey and exReport string
+	// if the lengths are too small then return -1 to precise in xWays to stop operation
+	if (apiKey.length() < 64) {
+		apiKey = "None";
+		XWF_OutputMessage(L"[!] Bad ApiKey!", 0);
+		return -1;
+	}
 
 	//////////////////////////////////////////
 	//										//
@@ -314,7 +314,7 @@ LONG __stdcall XT_ProcessItemEx(LONG nItemID, HANDLE hItem, void* lpReserved)
 		XWF_OutputMessage(L"[+] initialization succed!", 0);
 		XWF_OutputMessage(L"[+] Start send hash!", 0);
 
-		string apiKey = "a34c4261b57f6a61bf61b75b763be89cbad351d0be637822bc35b6ead6c053a8";
+		// string apiKey = "a34c4261b57f6a61bf61b75b763be89cbad351d0be637822bc35b6ead6c053a8";
 
 		// set the URL that is about to receive our POST.
 		string urlScan = "https://www.virustotal.com/vtapi/v2/file/report?apikey=";
@@ -409,6 +409,11 @@ LONG __stdcall XT_ProcessItemEx(LONG nItemID, HANDLE hItem, void* lpReserved)
 				//			Creation report file		//
 				//										//
 				//////////////////////////////////////////
+
+				// Record the size of the file
+				string sizeStr = ">> Bytes Size:\n";
+				string size = to_string(XWF_GetSize(hItem, (LPVOID)1)) + " Bytes!";
+
 				// open/create file report in append mode
 				//ofstream reportFile("export/reportXtension.txt", ios::app);
 				ofstream reportFile("reportXTension.txt", ios::app);
@@ -422,6 +427,9 @@ LONG __stdcall XT_ProcessItemEx(LONG nItemID, HANDLE hItem, void* lpReserved)
 				reportFile << "\n";
 				reportFile << scoring;
 				reportFile << strScore;
+				reportFile << "\n";
+				reportFile << sizeStr;
+				reportFile << size;
 				reportFile << "\n\n";
 				// close file
 				reportFile.close();
