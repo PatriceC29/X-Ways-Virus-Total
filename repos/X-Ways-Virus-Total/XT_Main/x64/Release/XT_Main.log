@@ -1,3 +1,0 @@
-﻿  X-Tension.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1555,5): warning MSB8012: TargetPath(C:\Users\Patrice\source\repos\X-Ways-Virus-Total\x64\Release\XT_Main.lib) ne correspond pas à la valeur de la propriété OutputFile () de Library. Cela peut entraîner une génération incorrecte de votre projet. Pour corriger ce problème, vérifiez que les valeurs des propriétés $(OutDir), $(TargetName) et $(TargetExt) correspondent à la valeur spécifiée dans %(Lib.OutputFile).
-  XT_Main.vcxproj -> C:\Users\Patrice\source\repos\X-Ways-Virus-Total\x64\Release\XT_Main.lib

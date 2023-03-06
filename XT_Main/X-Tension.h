@@ -18,24 +18,27 @@
 // XT_RetrieveFunctionPointers - call this function before calling anything else
 LONG __stdcall XT_RetrieveFunctionPointers();
 
-// XWF_GetSize (tested)
-typedef INT64(__stdcall *fptr_XWF_GetSize) (HANDLE hVolumeOrItem, LPVOID lpOptional);
+// Get list of missing functions
+const char* getMissingFunctions();
+
+// XWF_GetSize (tested, deprecated, use XWF_GetProp instead)
+typedef INT64 (__stdcall *fptr_XWF_GetSize) (HANDLE hVolumeOrItem, LPVOID lpOptional);
 
 // XWF_GetVolumeName (tested)
-typedef void(__stdcall *fptr_XWF_GetVolumeName) (HANDLE hVolume, wchar_t* lpString,
+typedef void (__stdcall *fptr_XWF_GetVolumeName) (HANDLE hVolume, wchar_t* lpString, 
 	DWORD nType);
 
 // XWF_GetVolumeInformation (tested)
-typedef void(__stdcall *fptr_XWF_GetVolumeInformation) (HANDLE hVolume,
-	LPLONG lpFileSystem, DWORD* nBytesPerSector, DWORD* nSectorsPerCluster,
+typedef void (__stdcall *fptr_XWF_GetVolumeInformation) (HANDLE hVolume, 
+	LPLONG lpFileSystem, DWORD* nBytesPerSector, DWORD* nSectorsPerCluster, 
 	INT64* nClusterCount, INT64* nFirstClusterSectorNo);
 
 // XWF_GetSectorContents
-typedef BOOL(__stdcall *fptr_XWF_GetSectorContents) (HANDLE hVolume, INT64 nSectorNo,
+typedef BOOL (__stdcall *fptr_XWF_GetSectorContents) (HANDLE hVolume, INT64 nSectorNo, 
 	wchar_t* lpDescr, LPLONG lpItemID);
 
 // XWF_Read (tested)
-typedef DWORD(__stdcall *fptr_XWF_Read) (HANDLE hVolumeOrItem, INT64 nOffset, BYTE* lpBuffer,
+typedef DWORD (__stdcall *fptr_XWF_Read) (HANDLE hVolumeOrItem, INT64 nOffset, BYTE* lpBuffer, 
 	DWORD nNumberOfBytesToRead);
 
 // XWF_SectorIO
@@ -43,27 +46,29 @@ typedef DWORD(__stdcall *fptr_XWF_SectorIO) (LONG nDrive, INT64 nSector, DWORD n
 	LPVOID lpBuffer, LPDWORD nFlags);
 
 // XWF_SelectVolumeSnapshot
-typedef void(__stdcall *fptr_XWF_SelectVolumeSnapshot) (HANDLE hVolume);
+typedef void (__stdcall *fptr_XWF_SelectVolumeSnapshot) (HANDLE hVolume);
 
 // XWF_GetItemCount
-typedef DWORD(__stdcall *fptr_XWF_GetItemCount) (LPVOID pReserved);
+typedef DWORD (__stdcall *fptr_XWF_GetItemCount) (LPVOID pReserved);
 
 // XWF_GetFileCount
 typedef DWORD(__stdcall *fptr_XWF_GetFileCount) (LONG nDirID);
 
 // XWF_CreateItem
-typedef long int(__stdcall *fptr_XWF_CreateItem) (wchar_t* lpName, DWORD nCreationFlags);
+typedef long int (__stdcall *fptr_XWF_CreateItem) (wchar_t* lpName, DWORD nCreationFlags);
 
-#pragma pack(2) 
+#pragma pack(push)
+#pragma pack(2)
 struct SrcInfo {
 	DWORD nStructSize;
 	INT64 nBufSize;
 	LPVOID pBuffer;
 };
+#pragma pack(pop)
 
 // XWF_CreateFile
 typedef long int(__stdcall *fptr_XWF_CreateFile) (LPWSTR pName, DWORD nCreationFlags,
-	LONG nParentItemID, PVOID pSourceInfo);
+	LONG nParentItemID,	PVOID pSourceInfo);
 
 // XWF_FindItem1
 typedef long int(__stdcall *fptr_XWF_FindItem1) (LONG nParentItemID, LPWSTR lpName,
@@ -73,120 +78,122 @@ typedef long int(__stdcall *fptr_XWF_FindItem1) (LONG nParentItemID, LPWSTR lpNa
 typedef const wchar_t* (__stdcall *fptr_XWF_GetItemName) (LONG nItemID);
 
 // XWF_GetItemSize (tested)
-typedef INT64(__stdcall *fptr_XWF_GetItemSize) (LONG nItemID);
+typedef INT64 (__stdcall *fptr_XWF_GetItemSize) (LONG nItemID); 
 
 // XWF_SetItemSize
-typedef void(__stdcall *fptr_XWF_SetItemSize) (LONG nItemID, INT64 nSize);
+typedef void (__stdcall *fptr_XWF_SetItemSize) (LONG nItemID, INT64 nSize); 
 
 // XWF_GetItemOfs
-typedef void(__stdcall *fptr_XWF_GetItemOfs) (LONG nItemID, INT64* lpDefOfs,
-	INT64* lpStartSector);
+typedef void (__stdcall *fptr_XWF_GetItemOfs) (LONG nItemID, INT64* lpDefOfs, 
+	INT64* lpStartSector); 
 
 // XWF_SetItemOfs
-typedef void(__stdcall *fptr_XWF_SetItemOfs) (LONG nItemID, INT64 nDefOfs,
-	INT64 nStartSector);
+typedef void (__stdcall *fptr_XWF_SetItemOfs) (LONG nItemID, INT64 nDefOfs, 
+	INT64 nStartSector); 
 
 // XWF_GetItemInformation
-typedef INT64(__stdcall *fptr_XWF_GetItemInformation) (LONG nItemID,
-	LONG nInfoType, LPBOOL lpSuccess);
+typedef INT64 (__stdcall *fptr_XWF_GetItemInformation) (LONG nItemID, 
+   LONG nInfoType, LPBOOL lpSuccess); 
 
 // XWF_SetItemInformation
-typedef BOOL(__stdcall *fptr_XWF_SetItemInformation) (LONG nItemID,
-	LONG nInfoType, INT64 nInfoValue);
+typedef BOOL (__stdcall *fptr_XWF_SetItemInformation) (LONG nItemID, 
+   LONG nInfoType, INT64 nInfoValue);
 
 // XWF_GetItemType
-typedef LONG(__stdcall *fptr_XWF_GetItemType) (LONG nItemID, wchar_t*lpTypeDescr,
+typedef LONG (__stdcall *fptr_XWF_GetItemType) (LONG nItemID, wchar_t*lpTypeDescr, 
 	DWORD nBufferLenAndFlags);
 
 // XWF_SetItemType
-typedef void(__stdcall *fptr_XWF_SetItemType) (LONG nItemID, wchar_t*lpTypeDescr,
-	LONG nTypeStatus);
+typedef void (__stdcall *fptr_XWF_SetItemType) (LONG nItemID, wchar_t*lpTypeDescr, 
+	LONG nTypeStatus); 
 
 // XWF_GetItemParent
-typedef LONG(__stdcall *fptr_XWF_GetItemParent) (LONG nItemID);
+typedef LONG (__stdcall *fptr_XWF_GetItemParent) (LONG nItemID); 
 
 // XWF_SetItemParent
-typedef void(__stdcall *fptr_XWF_SetItemParent) (LONG nChildItemID, LONG nParentItemID);
+typedef void (__stdcall *fptr_XWF_SetItemParent) (LONG nChildItemID, LONG nParentItemID); 
 
 // XWF_GetHashSetAssocs
-typedef LONG(__stdcall *fptr_XWF_GetHashSetAssocs) (LONG nItemID, LPWSTR lpBuffer,
+typedef LONG (__stdcall *fptr_XWF_GetHashSetAssocs) (LONG nItemID, LPWSTR lpBuffer,
 	LONG nBufferLen);
 
 // XWF_GetReportTableAssocs
-typedef LONG(__stdcall *fptr_XWF_GetReportTableAssocs) (LONG nItemID,
-	wchar_t* lpBuffer, LONG nBufferLen);
+typedef LONG (__stdcall *fptr_XWF_GetReportTableAssocs) (LONG nItemID, 
+	wchar_t* lpBuffer, LONG nBufferLen); 
 
 // XWF_AddToReportTable
-typedef LONG(__stdcall *fptr_XWF_AddToReportTable) (LONG nItemID,
-	wchar_t* lpReportTableName, DWORD nFlags);
+typedef LONG (__stdcall *fptr_XWF_AddToReportTable) (LONG nItemID, 
+	wchar_t* lpReportTableName, DWORD nFlags); 
 
 // XWF_GetComment
-typedef wchar_t* (__stdcall *fptr_XWF_GetComment) (LONG nItemID);
+typedef wchar_t* (__stdcall *fptr_XWF_GetComment) (LONG nItemID); 
 
 // XWF_AddComment (tested)
-typedef BOOL(__stdcall *fptr_XWF_AddComment) (LONG nItemID, wchar_t* lpComment,
+typedef BOOL (__stdcall *fptr_XWF_AddComment) (LONG nItemID, wchar_t* lpComment, 
 	DWORD nFlagsHowToAdd);
 
 // XWF_OutputMessage (tested)
-typedef void(__stdcall * fptr_XWF_OutputMessage) (const wchar_t* lpMessage, DWORD nFlags);
+typedef void (__stdcall * fptr_XWF_OutputMessage) (const wchar_t* lpMessage, DWORD nFlags); 
 
 // XWF_GetUserInput
 typedef INT64(__stdcall * fptr_XWF_GetUserInput) (LPWSTR lpMessage, LPWSTR lpBuffer,
 	DWORD nBufferLen, DWORD nFlags);
 
 // XWF_ShowProgress
-typedef void(__stdcall * fptr_XWF_ShowProgress) (wchar_t* lpCaption, DWORD nFlags);
+typedef void (__stdcall * fptr_XWF_ShowProgress) (wchar_t* lpCaption, DWORD nFlags);   
 
 // XWF_SetProgressPercentage
-typedef void(__stdcall * fptr_XWF_SetProgressPercentage) (DWORD nPercent);
+typedef void (__stdcall * fptr_XWF_SetProgressPercentage) (DWORD nPercent); 
 
 // XWF_SetProgressDescription
-typedef void(__stdcall * fptr_XWF_SetProgressDescription) (wchar_t* lpStr);
+typedef void (__stdcall * fptr_XWF_SetProgressDescription) (wchar_t* lpStr); 
 
 // XWF_ShouldStop
-typedef BOOL(__stdcall * fptr_XWF_ShouldStop) (void);
+typedef BOOL (__stdcall * fptr_XWF_ShouldStop) (void); 
 
 // XWF_HideProgress
-typedef void(__stdcall * fptr_XWF_HideProgress) (void);
+typedef void (__stdcall * fptr_XWF_HideProgress) (void); 
 
 // XWF_ReleaseMem
 typedef BOOL(__stdcall * fptr_XWF_ReleaseMem) (PVOID lpBuffer);
 
 // Open item in a volume
-typedef HANDLE(__stdcall * fptr_XWF_OpenItem) (HANDLE hVolume,
-	LONG nItemID, DWORD nFlags);
+typedef HANDLE (__stdcall * fptr_XWF_OpenItem) (HANDLE hVolume,
+   LONG nItemID, DWORD nFlags);
 
 // Close item on a volume
-typedef void(__stdcall * fptr_XWF_Close) (HANDLE hVolumeOrItem);
+typedef void (__stdcall * fptr_XWF_Close) (HANDLE hVolumeOrItem);
 
 // Create evidence object
-typedef HANDLE(__stdcall * fptr_XWF_CreateEvObj) (DWORD nType, LONG nDiskID,
-	LPWSTR lpPath, PVOID pReserved);
+typedef HANDLE (__stdcall * fptr_XWF_CreateEvObj) (DWORD nType, LONG nDiskID,
+   LPWSTR lpPath, PVOID pReserved);
 
 // Retrieve information about the current volume snapshot
-typedef INT64(__stdcall * fptr_XWF_GetVSProp) (LONG nPropType, PVOID pBuffer);
+typedef INT64 (__stdcall * fptr_XWF_GetVSProp) (LONG nPropType, PVOID pBuffer);
 
+#pragma pack(push)
 #pragma pack(2)
 struct SearchInfo {
-	LONG iSize;
-	HANDLE hVolume;
-	LPWSTR lpSearchTerms;
-	DWORD nFlags;
-	DWORD nSearchWindow;
+   LONG iSize;
+   HANDLE hVolume;
+   LPWSTR lpSearchTerms;
+   DWORD nFlags;
+   DWORD nSearchWindow;
 };
 
 #pragma pack(2)
 struct CodePages {
-	LONG iSize;
-	WORD nCodePage1;
-	WORD nCodePage2;
-	WORD nCodePage3;
-	WORD nCodePage4;
-	WORD nCodePage5;
+   LONG iSize;
+   WORD nCodePage1;
+   WORD nCodePage2;
+   WORD nCodePage3;
+   WORD nCodePage4;
+   WORD nCodePage5;
 };
+#pragma pack(pop)
 
 // XWF_Search
-typedef LONG(__stdcall * fptr_XWF_Search) (SearchInfo* SInfo, CodePages* CPages);
+typedef LONG(__stdcall * fptr_XWF_Search) (void/*SearchInfo*/* SInfo, void/*CodePages*/* CPages);
 
 // XWF_AddSearchTerm
 typedef LONG(__stdcall * fptr_XWF_AddSearchTerm) (LPWSTR lpSearchTermName, DWORD nFlags);
@@ -195,74 +202,76 @@ typedef LONG(__stdcall * fptr_XWF_AddSearchTerm) (LPWSTR lpSearchTermName, DWORD
 typedef LPWSTR(__stdcall * fptr_XWF_GetSearchTerm) (LONG nSearchTermID, LPVOID pReserved);
 
 // XWF_CreateContainer
-typedef HANDLE(__stdcall * fptr_XWF_CreateContainer) (LPWSTR lpFileName, DWORD nFlags, LPVOID pReserved);
+typedef HANDLE (__stdcall * fptr_XWF_CreateContainer) (LPWSTR lpFileName, 
+   DWORD nFlags, LPVOID pReserved);
 
 // XWF_CopyToContainer
-typedef LONG(__stdcall * fptr_XWF_CopyToContainer) (HANDLE hContainer,
-	HANDLE hItem, DWORD nFlags, DWORD nMode, INT64 nStartOfs,
-	INT64 nEndOfs, LPVOID pReserved);
+typedef LONG (__stdcall * fptr_XWF_CopyToContainer) (HANDLE hContainer, 
+   HANDLE hItem, DWORD nFlags, DWORD nMode, INT64 nStartOfs, 
+   INT64 nEndOfs, LPVOID pReserved);
 
 // XWF_CloseContainer
-typedef LONG(__stdcall * fptr_XWF_CloseContainer) (HANDLE hContainer,
-	LPVOID pReserved);
+typedef LONG (__stdcall * fptr_XWF_CloseContainer) (HANDLE hContainer, 
+   LPVOID pReserved);
 
 // XWF_GetBlock
-typedef BOOL(__stdcall * fptr_XWF_GetBlock) (HANDLE hVolume, INT64* lpStartOfs, INT64* lpEndOfs);
+typedef BOOL (__stdcall * fptr_XWF_GetBlock) (HANDLE hVolume, INT64* lpStartOfs, INT64* lpEndOfs);
 
 // XWF_SetBlock
-typedef BOOL(__stdcall * fptr_XWF_SetBlock) (HANDLE hVolume, INT64 nStartOfs, INT64 nEndOfs);
+typedef BOOL (__stdcall * fptr_XWF_SetBlock) (HANDLE hVolume, INT64 nStartOfs, INT64 nEndOfs);
 
 // XWF_GetCaseProp
-typedef INT64(__stdcall * fptr_XWF_GetCaseProp) (LPVOID pReserved, LONG nPropType, PVOID pBuffer,
-	LONG nBufLen);
+typedef INT64 (__stdcall * fptr_XWF_GetCaseProp) (LPVOID pReserved, LONG nPropType, PVOID pBuffer,
+   LONG nBufLen);
 
 // XWF_GetFirstEvObj
-typedef HANDLE(__stdcall * fptr_XWF_GetFirstEvObj) (LPVOID pReserved);
+typedef HANDLE (__stdcall * fptr_XWF_GetFirstEvObj) (LPVOID pReserved);
 
 // XWF_GetNextEvObj
-typedef HANDLE(__stdcall * fptr_XWF_GetNextEvObj) (HANDLE hPrevEvidence, LPVOID pReserved);
+typedef HANDLE (__stdcall * fptr_XWF_GetNextEvObj) (HANDLE hPrevEvidence, LPVOID pReserved);
 
 // XWF_OpenEvObj
-typedef HANDLE(__stdcall * fptr_XWF_OpenEvObj) (HANDLE hEvidence, DWORD nFlags);
+typedef HANDLE (__stdcall * fptr_XWF_OpenEvObj) (HANDLE hEvidence, DWORD nFlags);
 
 // XWF_CloseEvObj
-typedef VOID(__stdcall * fptr_XWF_CloseEvObj) (HANDLE hEvidence);
+typedef VOID (__stdcall * fptr_XWF_CloseEvObj) (HANDLE hEvidence);
 
 // XWF_GetEvObj
-typedef HANDLE(__stdcall * fptr_XWF_GetEvObj) (DWORD nEvObjID);
+typedef HANDLE (__stdcall * fptr_XWF_GetEvObj) (DWORD nEvObjID);
 
 // XWF_GetEvObjProp
-typedef INT64(__stdcall * fptr_XWF_GetEvObjProp) (HANDLE hEvidence, DWORD nPropType,
-	PVOID pBuffer);
+typedef INT64 (__stdcall * fptr_XWF_GetEvObjProp) (HANDLE hEvidence, DWORD nPropType,
+   PVOID pBuffer);
 
 // XWF_GetExtractedMetadata
-typedef LPWSTR(__stdcall * fptr_XWF_GetExtractedMetadata) (LONG nItemID);
+typedef LPWSTR (__stdcall * fptr_XWF_GetExtractedMetadata) (LONG nItemID);
 
 // XWF_GetMetadataEx
-typedef LPVOID(__stdcall * fptr_XWF_GetMetadataEx) (HANDLE hItem, PDWORD lpnFlags);
+typedef LPVOID (__stdcall * fptr_XWF_GetMetadataEx) (HANDLE hItem, PDWORD lpnFlags);
 
 // XWF_GetRasterImage
 typedef LPVOID(__stdcall * fptr_XWF_GetRasterImage) (struct RasterImageInfo* RIInfo);
 
 // XWF_AddExtractedMetadata
-typedef BOOL(__stdcall * fptr_XWF_AddExtractedMetadata) (LONG nItemID, LPWSTR lpComment, DWORD nFlagsHowToAdd);
+typedef BOOL (__stdcall * fptr_XWF_AddExtractedMetadata) (LONG nItemID, LPWSTR lpComment, DWORD nFlagsHowToAdd);
 
 // XWF_GetHashValue
-typedef BOOL(__stdcall * fptr_XWF_GetHashValue) (LONG nItemID, LPVOID lpBuffer);
+typedef BOOL (__stdcall * fptr_XWF_GetHashValue) (LONG nItemID, LPVOID lpBuffer);
 
 // XWF_SetHashValue
-typedef BOOL(__stdcall * fptr_XWF_SetHashValue) (LONG nItemID, LPVOID lpHash, DWORD nParam);
+typedef BOOL (__stdcall * fptr_XWF_SetHashValue) (LONG nItemID, LPVOID lpHash, DWORD nParam);
 
+#pragma pack(push)
 #pragma pack(2)
 struct EventInfo {
-	LONG iSize;
-	HANDLE hEvidence;
-	DWORD nEvtType;
-	DWORD nFlags;
-	FILETIME TimeStamp;
-	LONG nItemID;
-	INT64 nOfs;
-	LPSTR lpDescr;
+   LONG iSize;
+   HANDLE hEvidence;
+   DWORD nEvtType;
+   DWORD nFlags;
+   FILETIME TimeStamp;
+   LONG nItemID;
+   INT64 nOfs;
+   LPSTR lpDescr;
 };
 
 #pragma pack(2) 
@@ -275,20 +284,28 @@ struct RasterImageInfo {
 	DWORD nHeight;
 	DWORD nResSize;
 };
+#pragma pack(pop)
 
 // XWF_AddEvent
-typedef LONG(__stdcall * fptr_XWF_AddEvent) (struct EventInfo* Evt);
+typedef LONG (__stdcall * fptr_XWF_AddEvent) (struct EventInfo* Evt);
 
 // XWF_GetEvent
 typedef DWORD(__stdcall * fptr_XWF_GetEvent) (DWORD nEventNo, struct EventInfo* Evt);
 
-
 // XWF_GetReportTableInfo
-typedef LPVOID(__stdcall * fptr_XWF_GetReportTableInfo) (LPVOID pReserved, LONG nReportTableID, PLONG lpOptional);
+typedef LPVOID (__stdcall * fptr_XWF_GetReportTableInfo) (LPVOID pReserved, LONG nReportTableID, PLONG lpOptional);
 
 // XWF_GetEvObjReportTableAssocs
-typedef LPVOID(__stdcall * fptr_XWF_GetEvObjReportTableAssocs) (HANDLE hEvidence, LONG nFlags, PLONG lpValue);
+typedef LPVOID (__stdcall * fptr_XWF_GetEvObjReportTableAssocs) (HANDLE hEvidence, LONG nFlags, PLONG lpValue);
 
+// XWF_GetWindow
+typedef HWND (__stdcall * fptr_XWF_GetWindow)(WORD nWndNo, WORD nWndIndex);
+
+// XWF_GetProp (tested)
+typedef INT64 (__stdcall * fptr_XWF_GetProp)(HANDLE hVolumeOrItem, DWORD nPropType, void* lpBuffer);
+
+// XWF_ManageSearchTerm
+typedef DWORD (__stdcall * fptr_XWF_ManageSearchTerm)(LONG nSearchTermID, LONG nProperty, DWORD* pValue);
 
 ///////////////////////////////////////////////////////////////////////////////
 // Variables that store the function pointers
@@ -359,6 +376,12 @@ extern fptr_XWF_GetEvent XWF_GetEvent;
 extern fptr_XWF_GetReportTableInfo XWF_GetReportTableInfo;
 extern fptr_XWF_GetEvObjReportTableAssocs XWF_GetEvObjReportTableAssocs;
 
+extern fptr_XWF_GetWindow XWF_GetWindow;
+
+extern fptr_XWF_GetProp XWF_GetProp;
+
+extern fptr_XWF_ManageSearchTerm XWF_ManageSearchTerm;
+
 extern fptr_XWF_Search XWF_Search;
 
 
@@ -381,16 +404,16 @@ extern fptr_XWF_Search XWF_Search;
 #define XWF_ITEM_INFO_FLAGS 3
 #define XWF_ITEM_INFO_DELETION 4
 #define XWF_ITEM_INFO_CLASSIFICATION 5 // e.g. extracted e-mail message, alternate data stream, etc.
-#define XWF_ITEM_INFO_LINKCOUNT = 6 // hard-link count
-#define XWF_ITEM_INFO_FILECOUNT = 11 // how many child objects exist recursively that are files
-#define XWF_ITEM_INFO_CREATIONTIME = 32
-#define XWF_ITEM_INFO_MODIFICATIONTIME = 33
-#define XWF_ITEM_INFO_LASTACCESSTIME = 34
-#define XWF_ITEM_INFO_ENTRYMODIFICATIONTIME = 35
-#define XWF_ITEM_INFO_DELETIONTIME = 36
-#define XWF_ITEM_INFO_INTERNALCREATIONTIME = 37
-#define XWF_ITEM_INFO_FLAGS_SET = 64 // indicates only flags that should be set, others remain unchanged
-#define XWF_ITEM_INFO_FLAGS_REMOVE = 65 // indicates flags that should be removed, others remain unchanged
+#define XWF_ITEM_INFO_LINKCOUNT 6 // hard-link count
+#define XWF_ITEM_INFO_FILECOUNT 11 // how many child objects exist recursively that are files
+#define XWF_ITEM_INFO_CREATIONTIME 32
+#define XWF_ITEM_INFO_MODIFICATIONTIME 33
+#define XWF_ITEM_INFO_LASTACCESSTIME 34
+#define XWF_ITEM_INFO_ENTRYMODIFICATIONTIME 35
+#define XWF_ITEM_INFO_DELETIONTIME 36
+#define XWF_ITEM_INFO_INTERNALCREATIONTIME 37
+#define XWF_ITEM_INFO_FLAGS_SET 64 // indicates only flags that should be set, others remain unchanged
+#define XWF_ITEM_INFO_FLAGS_REMOVE 65 // indicates flags that should be removed, others remain unchanged
 
 #define XWF_SEARCH_LOGICAL 0x00000001 // logical search instead of physical search (only logical search currently available)
 #define XWF_SEARCH_TAGGEDOBJ 0x00000004 // tagged objects in volume snapshot only
@@ -429,40 +452,40 @@ extern fptr_XWF_Search XWF_Search;
 // Functions that X-Ways Forensics or WinHex may call
 
 struct CallerInfo {
-	byte lang, ServiceRelease;
-	WORD version;
+   byte lang, ServiceRelease;
+   WORD version;
 };
 
 // XT_Init - mandatory export
-LONG __stdcall XT_Init(CallerInfo info, DWORD nFlags, HANDLE hMainWnd,
-	void* lpReserved);
+LONG __stdcall XT_Init(DWORD/*CallerInfo*/ info, DWORD nFlags, HANDLE hMainWnd,
+   void* lpReserved);
 
 // The following functions are optional for export
 // In order to implement the functions, implement them and activate them
 // in the module definition file
 
 // XT_Done
-//LONG __stdcall XT_Done(void* lpReserved);
+LONG __stdcall XT_Done(void* lpReserved);
 
 // XT_About
 LONG __stdcall XT_About(HANDLE hParentWnd, void* lpReserved);
 
 // XT_Prepare
-//LONG __stdcall XT_Prepare(HANDLE hVolume, HANDLE hEvidence, DWORD nOpType, 
-//   void* lpReserved);
+LONG __stdcall XT_Prepare(HANDLE hVolume, HANDLE hEvidence, DWORD nOpType, 
+   void* lpReserved);
 
 // XT_Finalize
-//LONG __stdcall XT_Finalize(HANDLE hVolume, HANDLE hEvidence, DWORD nOpType, 
-//   void* lpReserved);
+LONG __stdcall XT_Finalize(HANDLE hVolume, HANDLE hEvidence, DWORD nOpType, 
+   void* lpReserved);
 
 // XT_ProcessItem
-//LONG __stdcall XT_ProcessItem(LONG nItemID, void* lpReserved);
+LONG __stdcall XT_ProcessItem(LONG nItemID, void* lpReserved);
 
 // XT_ProcessItemEx
 LONG __stdcall XT_ProcessItemEx(LONG nItemID, HANDLE hItem, void* lpReserved);
 
 // XT_ProcessSearchHit
-//LONG __stdcall XT_ProcessSearchHit(struct SearchHitInfo* info);
+LONG __stdcall XT_ProcessSearchHit(struct SearchHitInfo* info);
 
 /*#pragma pack(2)
 struct PrepareSearchInfo {
@@ -486,10 +509,10 @@ struct CodePages {
 //LONG XT_PrepareSearch(struct PrepareSearchInfo* PSInfo, struct CodePages* CPages);
 
 // Used for viewer X-Tensions
-//PVOID XT_View(HANDLE hItem, LONG nItemID, HANDLE hVolume, HANDLE hEvidence,
-//   PVOID lpReserved, PINT64 nResSize);
+PVOID XT_View(HANDLE hItem, LONG nItemID, HANDLE hVolume, HANDLE hEvidence,
+   PVOID lpReserved, PINT64 nResSize);
 
 // free up memory allocated by a previous call e.g. of XT_View
-//BOOL XT_ReleaseMem(PVOID lpBuffer);
+BOOL XT_ReleaseMem(PVOID lpBuffer);
 
-#endif#pragma once
+#endif

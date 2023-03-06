@@ -1,5 +1,42 @@
 ﻿  X-Vt.cpp
-     Création de la bibliothèque C:\Travail\ExtX-Ways\X-Ways-Virus-Total\x64\Release\X-Ways-Virus-Total.lib et de l'objet C:\Travail\ExtX-Ways\X-Ways-Virus-Total\x64\Release\X-Ways-Virus-Total.exp
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(256,41): warning C4244: 'argument' : conversion de 'INT64' en 'int', perte possible de données
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(259,41): warning C4244: 'argument' : conversion de 'INT64' en 'int', perte possible de données
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xstring(2859,53): warning C4244: 'argument' : conversion de 'wchar_t' en 'const _Elem', perte possible de données
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xstring(2718,1): message : voir la référence à l'instanciation de la fonction modèle 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' en cours de compilation
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xstring(2718,37): message : voir la référence à l'instanciation de la fonction modèle 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' en cours de compilation
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(287): message : voir la référence à l'instanciation de la fonction modèle 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' en cours de compilation
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(287,16): message : voir la référence à l'instanciation de la fonction modèle 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' en cours de compilation
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+     Création de la bibliothèque C:\Users\Patrice\source\repos\X-Ways-Virus-Total\x64\Release\X-Ways-Virus-Total.lib et de l'objet C:\Users\Patrice\source\repos\X-Ways-Virus-Total\x64\Release\X-Ways-Virus-Total.exp
   Génération de code en cours
   Fin de la génération du code
-  X-Ways-Virus-Total.vcxproj -> C:\Travail\ExtX-Ways\X-Ways-Virus-Total\x64\Release\X-Ways-Virus-Total.dll
+  X-Ways-Virus-Total.vcxproj -> C:\Users\Patrice\source\repos\X-Ways-Virus-Total\x64\Release\X-Ways-Virus-Total.dll
