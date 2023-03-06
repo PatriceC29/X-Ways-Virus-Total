@@ -1,0 +1,2 @@
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\x64\Release\XT_Main.lib.lastcodeanalysissucceeded
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\x64\Release\NativeCodeAnalysis.read.1.tlog

@@ -1,0 +1,23 @@
+﻿  X-Tension.cpp
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(343,26): error C3861: 'irand' : identificateur introuvable
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(343,32): message : 'irand' : la déclaration de fonction doit être disponible, car aucun des arguments ne dépend d'un paramètre de modèle
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,8): error C2065: 'uint64_t' : identificateur non déclaré
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,17): error C3878: erreur de syntaxe : jeton inattendu 'identificateur' après 'expression'
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,17): message : erreur de récupération ignorée : « identificateur > (  . . . identificateur »
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,52): error C2760: erreur de syntaxe : ')' était inattendu ici; ';' attendu
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,52): error C3878: erreur de syntaxe : jeton inattendu ')' après 'expression_statement'
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,52): error C3878: erreur de syntaxe : jeton inattendu ')' après 'statement'
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,52): error C3878: erreur de syntaxe : jeton inattendu ')' après 'selection_statement'
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,52): error C3878: erreur de syntaxe : jeton inattendu ')' après 'statement_seq'
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,52): message : l’un des éléments suivants est manquant :  '}' ?
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,52): error C2760: erreur de syntaxe : ')' était inattendu ici; '}' attendu
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,52): error C3878: erreur de syntaxe : jeton inattendu ')' après 'compound_statement'
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(566,52): message : erreur de récupération ignorée : « ) »
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(571,8): error C2065: 'int64_t' : identificateur non déclaré
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(571,16): error C3878: erreur de syntaxe : jeton inattendu 'identificateur' après 'expression'
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(571,16): message : erreur de récupération ignorée : « identificateur < (  . . . identificateur »
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(571,83): error C2760: erreur de syntaxe : ')' était inattendu ici; ';' attendu
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(571,83): error C3878: erreur de syntaxe : jeton inattendu ')' après 'expression_statement'
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(571,83): error C3878: erreur de syntaxe : jeton inattendu ')' après 'statement'
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(571,83): error C3878: erreur de syntaxe : jeton inattendu ')' après 'selection_statement'
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\XT_Main\BGBase.h(571,83): message : erreur de récupération ignorée : « ) »

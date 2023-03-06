@@ -1,0 +1,142 @@
+﻿  X-Vt.cpp
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(244,14): warning C4244: 'initialisation' : conversion de 'INT64' en 'int', perte possible de données
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(245,14): warning C4244: 'initialisation' : conversion de 'INT64' en 'int', perte possible de données
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xstring(2859,53): warning C4244: 'argument' : conversion de 'wchar_t' en 'const _Elem', perte possible de données
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xstring(2718,1): message : voir la référence à l'instanciation de la fonction modèle 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' en cours de compilation
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xstring(2718,37): message : voir la référence à l'instanciation de la fonction modèle 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' en cours de compilation
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(307): message : voir la référence à l'instanciation de la fonction modèle 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' en cours de compilation
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(307,16): message : voir la référence à l'instanciation de la fonction modèle 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' en cours de compilation
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+jsoncpp.lib(json_value.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+jsoncpp.lib(json_value.obj) : warning LNK4099: PDB '' n'a pu être trouvé avec 'jsoncpp.lib(json_value.obj)' ou sur '' ; l'objet sera lié sans informations de débogage
+jsoncpp.lib(json_reader.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+jsoncpp.lib(json_reader.obj) : warning LNK4099: PDB '' n'a pu être trouvé avec 'jsoncpp.lib(json_reader.obj)' ou sur '' ; l'objet sera lié sans informations de débogage
+jsoncpp.lib(json_writer.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+jsoncpp.lib(json_writer.obj) : warning LNK4099: PDB '' n'a pu être trouvé avec 'jsoncpp.lib(json_writer.obj)' ou sur '' ; l'objet sera lié sans informations de débogage
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: struct _Cvtvec __cdecl std::_Locinfo::_Getcvt(void)const " (?_Getcvt@_Locinfo@std@@QEBA?AU_Cvtvec@@XZ) déjà défini(e) dans jsoncpp.lib(json_reader.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: static void * __cdecl std::_Crt_new_delete::operator new(unsigned __int64)" (??2_Crt_new_delete@std@@SAPEAX_K@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: static void __cdecl std::_Crt_new_delete::operator delete(void *)" (??3_Crt_new_delete@std@@SAXPEAX@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: __cdecl std::locale::id::operator unsigned __int64(void)" (??Bid@locale@std@@QEAA_KXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: bool __cdecl std::ios_base::good(void)const " (?good@ios_base@std@@QEBA_NXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: int __cdecl std::ios_base::flags(void)const " (?flags@ios_base@std@@QEBAHXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: int __cdecl std::ios_base::setf(int,int)" (?setf@ios_base@std@@QEAAHHH@Z) déjà défini(e) dans jsoncpp.lib(json_writer.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: __int64 __cdecl std::ios_base::width(void)const " (?width@ios_base@std@@QEBA_JXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: __int64 __cdecl std::ios_base::width(__int64)" (?width@ios_base@std@@QEAA_J_J@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::basic_streambuf<char,struct std::char_traits<char> >(void)" (??0?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAA@XZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: virtual __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::~basic_streambuf<char,struct std::char_traits<char> >(void)" (??1?$basic_streambuf@DU?$char_traits@D@std@@@std@@UEAA@XZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: int __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::sputc(char)" (?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAAHD@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: __int64 __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::sputn(char const *,__int64)" (?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QEAA_JPEBD_J@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::eback(void)const " (?eback@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::gptr(void)const " (?gptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::pbase(void)const " (?pbase@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::pptr(void)const " (?pptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::egptr(void)const " (?egptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::gbump(int)" (?gbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXH@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::setg(char *,char *,char *)" (?setg@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD00@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::epptr(void)const " (?epptr@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBAPEADXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::_Gninc(void)" (?_Gninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAPEADXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: __int64 __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::_Gnavail(void)const " (?_Gnavail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBA_JXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::pbump(int)" (?pbump@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXH@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::setp(char *,char *)" (?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD0@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::setp(char *,char *,char *)" (?setp@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXPEAD00@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: char * __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::_Pninc(void)" (?_Pninc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAPEADXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: __int64 __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::_Pnavail(void)const " (?_Pnavail@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEBA_JXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: void __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::_Init(void)" (?_Init@?$basic_streambuf@DU?$char_traits@D@std@@@std@@IEAAXXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: virtual __int64 __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::xsgetn(char *,__int64)" (?xsgetn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEAD_J@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: virtual __int64 __cdecl std::basic_streambuf<char,struct std::char_traits<char> >::xsputn(char const *,__int64)" (?xsputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@MEAA_JPEBD_J@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: virtual __cdecl std::basic_ios<char,struct std::char_traits<char> >::~basic_ios<char,struct std::char_traits<char> >(void)" (??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: void __cdecl std::basic_ios<char,struct std::char_traits<char> >::setstate(int,bool)" (?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: class std::basic_ostream<char,struct std::char_traits<char> > * __cdecl std::basic_ios<char,struct std::char_traits<char> >::tie(void)const " (?tie@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_ostream@DU?$char_traits@D@std@@@2@XZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: class std::basic_streambuf<char,struct std::char_traits<char> > * __cdecl std::basic_ios<char,struct std::char_traits<char> >::rdbuf(void)const " (?rdbuf@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBAPEAV?$basic_streambuf@DU?$char_traits@D@std@@@2@XZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: char __cdecl std::basic_ios<char,struct std::char_traits<char> >::fill(void)const " (?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: char __cdecl std::basic_ios<char,struct std::char_traits<char> >::fill(char)" (?fill@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAADD@Z) déjà défini(e) dans jsoncpp.lib(json_writer.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "protected: __cdecl std::basic_ios<char,struct std::char_traits<char> >::basic_ios<char,struct std::char_traits<char> >(void)" (??0?$basic_ios@DU?$char_traits@D@std@@@std@@IEAA@XZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: __cdecl std::basic_ostream<char,struct std::char_traits<char> >::basic_ostream<char,struct std::char_traits<char> >(class std::basic_streambuf<char,struct std::char_traits<char> > *,bool)" (??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@PEAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: virtual __cdecl std::basic_ostream<char,struct std::char_traits<char> >::~basic_ostream<char,struct std::char_traits<char> >(void)" (??1?$basic_ostream@DU?$char_traits@D@std@@@std@@UEAA@XZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: void __cdecl std::basic_ostream<char,struct std::char_traits<char> >::_Osfx(void)" (?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAXXZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::basic_ostream<char,struct std::char_traits<char> >::operator<<(class std::ios_base & (__cdecl*)(class std::ios_base &))" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAVios_base@1@AEAV21@@Z@Z) déjà défini(e) dans jsoncpp.lib(json_writer.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)" (??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@H@Z) déjà défini(e) dans jsoncpp.lib(json_writer.obj)
+msvcprtd.lib(MSVCP140D.dll) : error LNK2005: "public: class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::basic_ostream<char,struct std::char_traits<char> >::flush(void)" (?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ) déjà défini(e) dans jsoncpp.lib(json_value.obj)
+libcpmtd.lib(ios.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(ios.obj) : error LNK2005: "public: static void __cdecl std::ios_base::_Addstd(class std::ios_base *)" (?_Addstd@ios_base@std@@SAXPEAV12@@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(ios.obj) : error LNK2005: "private: static void __cdecl std::ios_base::_Ios_base_dtor(class std::ios_base *)" (?_Ios_base_dtor@ios_base@std@@CAXPEAV12@@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(locale0.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(locale0.obj) : error LNK2005: "public: class std::_Yarn<char> & __cdecl std::_Yarn<char>::operator=(char const *)" (??4?$_Yarn@D@std@@QEAAAEAV01@PEBD@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(locale0.obj) : error LNK2005: "void __cdecl std::_Facet_Register(class std::_Facet_base *)" (?_Facet_Register@std@@YAXPEAV_Facet_base@1@@Z) déjà défini(e) dans msvcprtd.lib(locale0_implib.obj)
+libcpmtd.lib(locale0.obj) : error LNK2005: "private: static class std::locale::_Locimp * __cdecl std::locale::_Getgloballocale(void)" (?_Getgloballocale@locale@std@@CAPEAV_Locimp@12@XZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(locale0.obj) : error LNK2005: "private: static class std::locale::_Locimp * __cdecl std::locale::_Init(bool)" (?_Init@locale@std@@CAPEAV_Locimp@12@_N@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(locale0.obj) : error LNK2005: "public: static void __cdecl std::_Locinfo::_Locinfo_ctor(class std::_Locinfo *,char const *)" (?_Locinfo_ctor@_Locinfo@std@@SAXPEAV12@PEBD@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(locale0.obj) : error LNK2005: "public: static void __cdecl std::_Locinfo::_Locinfo_dtor(class std::_Locinfo *)" (?_Locinfo_dtor@_Locinfo@std@@SAXPEAV12@@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(locale0.obj) : error LNK2005: "private: static class std::locale::_Locimp * __cdecl std::locale::_Locimp::_New_Locimp(class std::locale::_Locimp const &)" (?_New_Locimp@_Locimp@locale@std@@CAPEAV123@AEBV123@@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(locale.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(locale.obj) : error LNK2005: "public: class std::_Yarn<char> & __cdecl std::_Yarn<char>::operator=(char const *)" (??4?$_Yarn@D@std@@QEAAAEAV01@PEBD@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(locale.obj) : error LNK2005: "private: void __cdecl std::locale::_Locimp::_Addfac(class std::locale::facet *,unsigned __int64)" (?_Addfac@_Locimp@locale@std@@AEAAXPEAVfacet@23@_K@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(locale.obj) : error LNK2005: "public: static unsigned __int64 __cdecl std::codecvt<char,char,struct _Mbstatet>::_Getcat(class std::locale::facet const * *,class std::locale const *)" (?_Getcat@?$codecvt@DDU_Mbstatet@@@std@@SA_KPEAPEBVfacet@locale@2@PEBV42@@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(iosptrs.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xthrow.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xthrow.obj) : error LNK2005: "void __cdecl std::_Xbad_alloc(void)" (?_Xbad_alloc@std@@YAXXZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xthrow.obj) : error LNK2005: "void __cdecl std::_Xlength_error(char const *)" (?_Xlength_error@std@@YAXPEBD@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xthrow.obj) : error LNK2005: "void __cdecl std::_Xout_of_range(char const *)" (?_Xout_of_range@std@@YAXPEBD@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(wlocale.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(wlocale.obj) : error LNK2005: "protected: virtual __cdecl std::codecvt<wchar_t,char,struct _Mbstatet>::~codecvt<wchar_t,char,struct _Mbstatet>(void)" (??1?$codecvt@_WDU_Mbstatet@@@std@@MEAA@XZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(wlocale.obj) : error LNK2005: "public: class std::_Yarn<char> & __cdecl std::_Yarn<char>::operator=(char const *)" (??4?$_Yarn@D@std@@QEAAAEAV01@PEBD@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(wlocale.obj) : error LNK2005: "private: void __cdecl std::locale::_Locimp::_Addfac(class std::locale::facet *,unsigned __int64)" (?_Addfac@_Locimp@locale@std@@AEAAXPEAVfacet@23@_K@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(wlocale.obj) : error LNK2005: "public: char const * __cdecl std::_Locinfo::_Getdays(void)const " (?_Getdays@_Locinfo@std@@QEBAPEBDXZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(wlocale.obj) : error LNK2005: "public: char const * __cdecl std::_Locinfo::_Getmonths(void)const " (?_Getmonths@_Locinfo@std@@QEBAPEBDXZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(wlocale.obj) : error LNK2005: "public: unsigned short const * __cdecl std::_Locinfo::_W_Getdays(void)const " (?_W_Getdays@_Locinfo@std@@QEBAPEBGXZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(wlocale.obj) : error LNK2005: "public: unsigned short const * __cdecl std::_Locinfo::_W_Getmonths(void)const " (?_W_Getmonths@_Locinfo@std@@QEBAPEBGXZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xlocale.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xlocale.obj) : error LNK2005: "public: class std::_Yarn<char> & __cdecl std::_Yarn<char>::operator=(char const *)" (??4?$_Yarn@D@std@@QEAAAEAV01@PEBD@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xlocale.obj) : error LNK2005: "private: void __cdecl std::locale::_Locimp::_Addfac(class std::locale::facet *,unsigned __int64)" (?_Addfac@_Locimp@locale@std@@AEAAXPEAVfacet@23@_K@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xlocale.obj) : error LNK2005: "public: char const * __cdecl std::_Locinfo::_Getdays(void)const " (?_Getdays@_Locinfo@std@@QEBAPEBDXZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xlocale.obj) : error LNK2005: "public: char const * __cdecl std::_Locinfo::_Getmonths(void)const " (?_Getmonths@_Locinfo@std@@QEBAPEBDXZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xlocale.obj) : error LNK2005: "public: unsigned short const * __cdecl std::_Locinfo::_W_Getdays(void)const " (?_W_Getdays@_Locinfo@std@@QEBAPEBGXZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xlocale.obj) : error LNK2005: "public: unsigned short const * __cdecl std::_Locinfo::_W_Getmonths(void)const " (?_W_Getmonths@_Locinfo@std@@QEBAPEBGXZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xlock.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xlock.obj) : error LNK2005: "public: __cdecl std::_Lockit::_Lockit(int)" (??0_Lockit@std@@QEAA@H@Z) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xlock.obj) : error LNK2005: "public: __cdecl std::_Lockit::~_Lockit(void)" (??1_Lockit@std@@QEAA@XZ) déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xstrcoll.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xdateord.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xwctomb.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xwctomb.obj) : error LNK2005: _Getcvt déjà défini(e) dans msvcprtd.lib(MSVCP140D.dll)
+libcpmtd.lib(xwcscoll.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xwcsxfrm.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xgetwctype.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xtowlower.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xtowupper.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xstrxfrm.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(xmtx.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(StlCompareStringW.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(StlLCMapStringW.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MTd_StaticDebug' ne correspond pas à la valeur 'MDd_DynamicDebug' in X-Vt.obj
+LINK : fatal error LNK1561: le point d'entrée doit être défini
