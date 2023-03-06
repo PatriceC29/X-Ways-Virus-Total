@@ -8,7 +8,7 @@ A report table (VirusTotal) is created according to a minimum score.
 When using a public key a delay of 15 seconds between queries is applied (4 queries / minutes)
 
 
-#Configuration
+# Configuration
 All mandatory settings are in the config.ini file
 
 * apikey : VirusTotal API key
