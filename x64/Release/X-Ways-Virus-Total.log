@@ -1,6 +1,6 @@
 ﻿  X-Vt.cpp
-C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(182,41): warning C4244: 'argument' : conversion de 'INT64' en 'int', perte possible de données
-C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(185,41): warning C4244: 'argument' : conversion de 'INT64' en 'int', perte possible de données
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(192,41): warning C4244: 'argument' : conversion de 'INT64' en 'int', perte possible de données
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(195,41): warning C4244: 'argument' : conversion de 'INT64' en 'int', perte possible de données
 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\include\xstring(2859,53): warning C4244: 'argument' : conversion de 'wchar_t' en 'const _Elem', perte possible de données
           with
           [
@@ -22,14 +22,14 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.3221
               _Sent=wchar_t *,
               _Size=unsigned __int64
           ]
-C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(213): message : voir la référence à l'instanciation de la fonction modèle 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' en cours de compilation
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(223): message : voir la référence à l'instanciation de la fonction modèle 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' en cours de compilation
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(213,16): message : voir la référence à l'instanciation de la fonction modèle 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' en cours de compilation
+C:\Users\Patrice\source\repos\X-Ways-Virus-Total\X-Ways-Virus-Total\X-Vt.cpp(223,16): message : voir la référence à l'instanciation de la fonction modèle 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' en cours de compilation
           with
           [
               _Elem=wchar_t,

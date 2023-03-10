@@ -1,0 +1,187 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26439",
+          "message": {
+            "text": "Ce genre de fonction ne devrait pas « throw ». Déclarez-le 'noexcept' (f.6)."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Patrice/source/repos/X-Ways-Virus-Total/packages/jsoncpp-vc140-static-32_64.1.8.0/lib/native/include/json/value.h"
+                },
+                "region": {
+                  "startLine": 861,
+                  "startColumn": 13,
+                  "endLine": 861,
+                  "endColumn": 13
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "std::swap",
+                  "decoratedName": "??$swap@VValue@Json@@$0A@@std@@YAXAEAVValue@Json@@0@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.35.32215.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Patrice/source/repos/X-Ways-Virus-Total/packages/jsoncpp-vc140-static-32_64.1.8.0/lib/native/include/json/value.h"
+          },
+          "roles": [
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "d1a20f45c19b6712d7263bfe7ac4bc7b7a5368a81cffa40b6368767864ff2535"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/x-ways-virus-total/x-vt.cpp"
+          },
+          "roles": [
+            "analysisTarget"
+          ],
+          "hashes": {
+            "sha-256": "ae0329db316cb241a52839b53d59ed80c3cdfd33f2064f4f5935241fcc6c5546"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/xt_main/x-tension.h"
+          },
+          "hashes": {
+            "sha-256": "976ed6246f77445cfecf49e8e8b2e13dd6e27d497b3dd6c9a11e0aa67d0ed9ff"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/curl-vc141-dynamic-x86_64.7.59.0/build/native/include/curl/curl.h"
+          },
+          "hashes": {
+            "sha-256": "1118379fe0d22846d19529840c1773ece623dfb05f563a7710a0577c85d7d621"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/curl-vc141-dynamic-x86_64.7.59.0/build/native/include/curl/curlver.h"
+          },
+          "hashes": {
+            "sha-256": "8a8a4412f07dfe363847b21c7683f799a3c6004ab405f140d15f53f0c2408137"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/curl-vc141-dynamic-x86_64.7.59.0/build/native/include/curl/system.h"
+          },
+          "hashes": {
+            "sha-256": "70a785571c0c9441bdb10c662f1078bc2905366dd9aa6103d4c168f9a5f270ee"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/curl-vc141-dynamic-x86_64.7.59.0/build/native/include/curl/easy.h"
+          },
+          "hashes": {
+            "sha-256": "58b2142e4bd3287e53b98cc0f4f8a23dd9ba502db4aae08dea51ff00823a5824"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/curl-vc141-dynamic-x86_64.7.59.0/build/native/include/curl/multi.h"
+          },
+          "hashes": {
+            "sha-256": "e2e68e6c37d69abbf281a545bc8a6a0cdc867b34f9e254e3cc1f5e710ef32955"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/jsoncpp-vc140-static-32_64.1.8.0/lib/native/include/json/json.h"
+          },
+          "hashes": {
+            "sha-256": "8415eaa5da31a68feb623bd4516e8a00877839852e56504b38020748766f12a3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/jsoncpp-vc140-static-32_64.1.8.0/lib/native/include/json/autolink.h"
+          },
+          "hashes": {
+            "sha-256": "d444f697e79f429f8771806b8589ccbaea616843ce4c7e647fbba2ffa787925d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/jsoncpp-vc140-static-32_64.1.8.0/lib/native/include/json/config.h"
+          },
+          "hashes": {
+            "sha-256": "b84b4ecf7e344e204ecb72027e0fe9c05165c4839e48199ef380a43c8d2e69a7"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/jsoncpp-vc140-static-32_64.1.8.0/lib/native/include/json/version.h"
+          },
+          "hashes": {
+            "sha-256": "89bbc7085fd9bc31b1b17bd7695030666a67c18d3eaabf832f4f1318787ecfb3"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/jsoncpp-vc140-static-32_64.1.8.0/lib/native/include/json/forwards.h"
+          },
+          "hashes": {
+            "sha-256": "9c058df940ae970c1c7e339da08f84ab8d4a97f7c7622a53d84f58537f2a785d"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/jsoncpp-vc140-static-32_64.1.8.0/lib/native/include/json/reader.h"
+          },
+          "hashes": {
+            "sha-256": "0b5db69da77951153ac93df2edc1d3c97e370bfc40db37ae92cced49967a8f8a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/jsoncpp-vc140-static-32_64.1.8.0/lib/native/include/json/features.h"
+          },
+          "hashes": {
+            "sha-256": "08ad8cfc07cfd2d87a071d6cb6bae7825ed926abc4fe260fb998d86d2898b745"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/patrice/source/repos/x-ways-virus-total/packages/jsoncpp-vc140-static-32_64.1.8.0/lib/native/include/json/writer.h"
+          },
+          "hashes": {
+            "sha-256": "f8a7b7b0fb5eadb5f98cec368d7a7351c2abf2aa4d82beeb67f1a0f7d3b7b634"
+          }
+        }
+      ]
+    }
+  ]
+}

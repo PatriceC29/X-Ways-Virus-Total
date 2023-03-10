@@ -6,6 +6,7 @@
 // http://x-ways.com/forensics/x-tensions/api.html
 // for current documentation
 
+#include "X-Vt.h"
 #include "../XT_Main/X-Tension.h"
 #include <sstream>
 #include <iomanip>
@@ -18,9 +19,9 @@
 #include <codecvt>
 #include <windows.h>
 
-const int XWF_VSPROP_HASHTYPE1 = 20;
-const int XWF_VSPROP_HASHTYPE2 = 21;
-const int HASH_SIZE = 20; //size in bystes of SHA-1 hash
+//const int XWF_VSPROP_HASHTYPE1 = 20;
+//const int XWF_VSPROP_HASHTYPE2 = 21;
+//const int HASH_SIZE = 20; //size in bystes of SHA-1 hash
 // values used to check the number of iterations
 int numIt = 0;
 int nbItems = 0;
@@ -97,7 +98,7 @@ LONG __stdcall XT_About(HANDLE hParentWnd, void* lpReserved) {
 									L"Gets Score of a given file sending it's SHA-1 hash.\n"
 									L"No files are sent.\n\n"
 									L"Rewritten and enhanced by :\n"
-									L"Patrice Couillon (SDLC/Formation)\n"
+									L"Patrice C. (SDLC/Formation)\n"
 									L"Original idea  : SDLC/D2A\n";
 
 	wchar_t* message = const_cast<wchar_t*>(constMessage);
@@ -110,7 +111,16 @@ LONG __stdcall XT_About(HANDLE hParentWnd, void* lpReserved) {
 	return 0;
 }
 
+// Exported function called by X-Ways when preparing for operations and to determine how we are to be called going forward
+LONG __stdcall XT_Prepare(HANDLE hVolume, HANDLE hEvidence, DWORD nOpType, void* lpReserved) {
 
+	// Only run when refining the volume snapshot or when invoked via the directory browser context menu
+	if (nOpType == XT_ACTION_RUN || nOpType == XT_ACTION_RVS || nOpType == XT_ACTION_DBC) {
+		return XT_PREPARE_CALLPI;
+	}
+
+	return 0;
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 // XT_ProcessItemEx

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DEFECTS><DEFECT>
+    <SFA>
+      <FILEPATH>C:\Users\Patrice\source\repos\X-Ways-Virus-Total\packages\jsoncpp-vc140-static-32_64.1.8.0\lib\native\include\json\</FILEPATH>
+      <FILENAME>value.h</FILENAME>
+      <LINE>861</LINE>
+      <COLUMN>12</COLUMN>
+    </SFA>
+    <DEFECTCODE>26439</DEFECTCODE>
+    <DESCRIPTION>Ce genre de fonction ne devrait pas « throw ». Déclarez-le 'noexcept' (f.6).</DESCRIPTION>
+    <FUNCTION>std::swap</FUNCTION>
+    <DECORATED>??$swap@VValue@Json@@$0A@@std@@YAXAEAVValue@Json@@0@Z</DECORATED>
+    <FUNCLINE>861</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT></DEFECTS>
